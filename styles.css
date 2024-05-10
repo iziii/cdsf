@@ -1,0 +1,77 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #3498db, #2980b9); /* Линейный градиент от #3498db до #2980b9 */
+    color: #fff; /* Белый цвет текста для контраста */
+}
+.coin-container {
+    text-align: center;
+    position: relative;
+}
+.coin {
+    width: 400px;
+    height: 400px;
+    perspective: 1500px;
+    margin-left: 30px;
+}
+.coin-inner {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    animation-name: flip;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+.side {
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+.side.front {
+    transform: rotateY(0deg);
+}
+.side.back {
+    transform: rotateY(180deg);
+}
+button {
+    padding: 10px 20px;
+    width: 300px;
+    height: 100px;
+    font-size: 30px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+    margin-top: 15px;
+}
+#result-text {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+@keyframes flip {
+    0% {
+        transform: rotateY(0deg);
+    }
+    50% {
+        transform: rotateY(720deg); /* Дважды вращаем монетку */
+    }
+    100% {
+        transform: rotateY(1080deg); /* Еще половину */
+    }
+}
