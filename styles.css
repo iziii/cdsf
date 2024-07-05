@@ -6,6 +6,9 @@ body {
     font-family: Arial, sans-serif;
     background: linear-gradient(135deg, #3498db, #2980b9); /* Линейный градиент от #3498db до #2980b9 */
     color: #fff; /* Белый цвет текста для контраста */
+    background-image: url('https://nickyylable.github.io/updateca/1212.png');
+    background-size: cover;
+    background-position: center;
 }
 .coin-container {
     text-align: center;
